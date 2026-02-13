@@ -12,23 +12,25 @@ namespace Project
 
         private void Start()
         {
-            if (Random.Range(0, 2) == 0)
-                isEnemy = true;
-            else
-                isEnemy = false;
-
+            isEnemy = Random.Range(0, 2) == 0;
+           
             Debug.Log(isEnemy);
         }
         private void Update()
+        {
+            Render();
+
+
+            Debug.Log("Вызвали апдейт");
+
+        }
+
+        private void Render()
         {
             if (isEnemy)
                 renderer.material.color = Color.red;
             else
                 renderer.material.color = Color.gray;
-
-
-            Debug.Log("Вызвали апдейт");
-
         }
     }
        
