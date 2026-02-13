@@ -9,6 +9,9 @@ namespace MyGame
 
         public void setDamage(int damage)
         {
+            if (isDeath == true)
+                return;
+
             health -= damage;
             if(health<0)
                 health = 0;

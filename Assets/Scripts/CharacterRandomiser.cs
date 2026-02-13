@@ -6,7 +6,7 @@ namespace Project
 
     public class CharacterRandomiser : MonoBehaviour
     {
-        public Renderer renderer;
+       [SerializeField] public MeshRenderer _renderer;
         
         public bool isEnemy;
 
@@ -21,16 +21,16 @@ namespace Project
             Render();
 
 
-            Debug.Log("Вызвали апдейт");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 
         }
 
         private void Render()
         {
             if (isEnemy)
-                renderer.material.color = Color.red;
+                GetComponent<Renderer>().material.color = Color.red;
             else
-                renderer.material.color = Color.gray;
+                GetComponent<Renderer>().material.color = Color.blue;
         }
     }
        
